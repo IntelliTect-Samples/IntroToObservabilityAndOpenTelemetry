@@ -4,7 +4,7 @@ Slides for [Intro to Observability and OpenTelemetry](https://www.meetup.com/spo
 
 Generate slides
 ```shell
-npx @marp-team/marp-cli@latest slides.md -o index.html
+npx @marp-team/marp-cli@latest --html slides.md -o index.html
 ```
 
 Run dev server

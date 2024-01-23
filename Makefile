@@ -1,2 +1,6 @@
 make:
-	npx @marp-team/marp-cli@latest slides.md -o index.html
+	npx @marp-team/marp-cli@latest --html slides.md -o index.html
+
+.PHONY: serve
+serve:
+	python3 -m http.server

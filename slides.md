@@ -38,6 +38,7 @@ What's my background with Observability and OpenTelemetry?
 ## A way, not plug-n-play™️
 - More about culture and practices than any one tool, like DevOps
 - Non-functional requirement
+
 ---
 ## What is a "world class" organization?
 - Can **change** quickly to meet business needs
@@ -64,6 +65,7 @@ What's my background with Observability and OpenTelemetry?
 - \- system scoped (silod)
 
 ---
+
 ## Metrics (2/3)
 - numerical representation of data measured over intervals of time
 - Timestamp, value (numeric), name, labels
@@ -72,7 +74,7 @@ What's my background with Observability and OpenTelemetry?
 - \+ good for alerting
 - \+ storage does not scale with usage
 - \- storage increases with cardinality (number of labels)
-- \- system scoped (silo'd)
+
 ---
 ## Traces (3/3)
 - provides context for a request across distributed architecture (end-to-end)
@@ -89,7 +91,8 @@ What's my background with Observability and OpenTelemetry?
 <!-- _class: lead -->
 # What is the OpenTelemetry project and why would I want to use it?
 ---
-# What is OTel
+## What is OTel
+- OpenTracing + OpenCensus ➡️ OpenTelemetry
 - Open source
 - Cloud Native Computing Foundation project — incubating
 - Vendor-agnostic and tool-agnostic
@@ -103,7 +106,7 @@ What's my background with Observability and OpenTelemetry?
 [https://failingfast.io/opentelemetry/](https://failingfast.io/opentelemetry/)
 
 ---
-# What is OTel — Instrumentation
+## What is OTel — Instrumentation
 - Automatic
     - \+ captures information for you by hooking into language and frameworks (e.g. Django, ASP.NET)
     - \- less granular
@@ -112,7 +115,7 @@ What's my background with Observability and OpenTelemetry?
     - \- have to setup yourself
 
 ---
-# What is OTel — Collectors
+## What is OTel — Collectors
 - What makes up a collector?
     - Receivers: receive data in a variety of formats
     - Processors: aggregating, sampling, filtering, and processing
@@ -127,7 +130,19 @@ What's my background with Observability and OpenTelemetry?
 - Cloud platforms support it
 - It is the future
 
-<!-- TODO: add Azure links -->
+---
+## Azure
+
+> Microsoft is excited to embrace OpenTelemetry as the future of telemetry instrumentation. [LINK](https://learn.microsoft.com/en-us/azure/azure-monitor/app/opentelemetry-overview#opentelemetry)
+
+> we are refactoring Azure’s native observability platform to be based on OpenTelemetry, an industry standard for instrumenting applications and transmitting telemetry. [LINK](https://devblogs.microsoft.com/dotnet/azure-monitor-opentelemetry-distro/)
+
+---
+## Other Cloud Platforms
+- [AWS Distro for OpenTelemetry (ADOT)](https://aws.amazon.com/otel/)
+    - Secure, production-ready, open-source distribution with reliable performance
+- [GCP Cloud Trace](https://cloud.google.com/trace/docs/setup)
+    - "Cloud Trace recommends using OpenTelemetry."
 
 ---
 ## Closing
@@ -136,7 +151,7 @@ What's my background with Observability and OpenTelemetry?
 — [SRE book](https://sre.google/sre-book/monitoring-distributed-systems/#the-long-run-MQsWTMS7)
 
 ---
-### Resources
+## Resources
 - [Distributed Systems Observability book](https://www.oreilly.com/library/view/distributed-systems-observability/9781492033431/)
 - [Observability Engineering book](https://learning.oreilly.com/library/view/observability-engineering/9781492076438/)
 - [Google SRE — Monitoring Distributed Systems](https://sre.google/sre-book/monitoring-distributed-systems/)
