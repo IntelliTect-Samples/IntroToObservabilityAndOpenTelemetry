@@ -13,8 +13,16 @@ theme: gaia
 What's my background with Observability and OpenTelemetry?
 
 ---
+## Outline
+Our goal today is to answer these four questions:
+- What is observability and why does it matters to world-class organizations?
+- How is observability related to monitoring?
+- What are the Three Pillars of Observability?
+- What is the OpenTelemetry project and why would I want to use it?
+
+---
 <!-- _class: lead -->
-# What is observability and why does it matters to world-class organizations?
+# 1. What is observability and why does it matters to world-class organizations?
 
 ---
 ## Software systems are complex
@@ -39,14 +47,30 @@ What's my background with Observability and OpenTelemetry?
 - More about culture and practices than any one tool, like DevOps
 - Non-functional requirement
 
+[The Second Way: Amplify Feedback Loops](https://itrevolution.com/articles/the-three-ways-principles-underpinning-devops/)
+![width:600px](static/the-second-way.png)
+
+<!--
+The Second Way is about creating the right to left feedback loops. The goal of almost any process improvement initiative is to shorten and amplify feedback loops so necessary corrections can be continually made.
+
+The outcomes of the Second Way include understanding and responding to all customers, internal and external, shortening and amplifying all feedback loops, and embedding knowledge where we need it.
+
+https://itrevolution.com/articles/the-three-ways-principles-underpinning-devops/
+-->
+
 ---
 ## What is a "world class" organization?
 - Can **change** quickly to meet business needs
-- End user outcomes are the focus
+- Focus on providing on value to the customer
 - Observability enables software and organizations to move fast and break _less_ things
+
+> "Organizations with the highest service levels rebooted their servers twenty times less frequently than average... the best-performing organizations were much better at diagnosing and fixing service incidents."
+
+— [The DevOps Handbook, pg 195](https://itrevolution.com/product/the-devops-handbook-second-edition/)
+
 ---
 <!-- _class: lead -->
-# How is observability related to monitoring?
+# 2. How is observability related to monitoring?
 ---
 ## How is observability related to monitoring?
 - Observability ∈ monitoring
@@ -54,7 +78,7 @@ What's my background with Observability and OpenTelemetry?
 ![width:400px](static/star-wars-galaxy.png)
 ---
 <!-- _class: lead -->
-# What are the Three Pillars of Observability?
+# 3. What are the Three Pillars of Observability?
 ---
 ## Logs (1/3)
 - The one we're all familiar with
@@ -89,7 +113,7 @@ What's my background with Observability and OpenTelemetry?
 
 ---
 <!-- _class: lead -->
-# What is the OpenTelemetry project and why would I want to use it?
+# 4. What is the OpenTelemetry project and why would I want to use it?
 ---
 ## What is OTel
 - OpenTracing + OpenCensus ➡️ OpenTelemetry
@@ -123,6 +147,13 @@ What's my background with Observability and OpenTelemetry?
 - Don't _have_ to use one, but it's recommended
 
 ---
+## A typical OTel setup
+![width:1100px](https://intellitect.com/wp-content/uploads/2023/12/chain.png)
+
+- Prometheus: OSS monitoring system and time series database
+- Grafana: OSS analytics and monitoring solution with a focus on dashboards and alerts
+
+---
 ## Why OTel?
 - Vendor-agnostic
 - Supported in most/all popular programming languages
@@ -149,6 +180,10 @@ What's my background with Observability and OpenTelemetry?
 > Often, sheer force of effort can help a rickety system achieve high availability, but this path is usually short-lived and fraught with burnout and dependence on a small number of heroic team members. Taking a controlled, short-term decrease in availability is often a painful, but strategic trade for the long-run stability of the system.
 
 — [SRE book](https://sre.google/sre-book/monitoring-distributed-systems/#the-long-run-MQsWTMS7)
+
+---
+<!-- _class: lead -->
+## Demo (if time permits)
 
 ---
 ## Resources
