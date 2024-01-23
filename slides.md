@@ -79,6 +79,9 @@ https://itrevolution.com/articles/the-three-ways-principles-underpinning-devops/
 ---
 <!-- _class: lead -->
 # 3. What are the Three Pillars of Observability?
+
+<!-- Lenses to look at your system through -->
+
 ---
 ## Logs (1/3)
 - The one we're all familiar with
