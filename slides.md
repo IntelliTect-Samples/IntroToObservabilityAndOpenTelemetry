@@ -9,7 +9,13 @@ theme: gaia
 
 ---
 <!-- _class: lead -->
+# Hi, I'm Joe :wave:
+What's my background with Observability and OpenTelemetry?
+
+---
+<!-- _class: lead -->
 # What is observability and why does it matters to world-class organizations?
+
 ---
 ## Software systems are complex
 - They are built on many layers, like a pile of Jenga blocks
@@ -18,24 +24,25 @@ theme: gaia
 - Cross-functional: built and operated by multiple teams
 ---
 ## Observability: better visibility into systems
-- Why: help you identify and solve problems faster -> enables the business to move faster
+- Why: help you identify and solve problems faster ➡️ enables the business to move faster
 - How: Monitoring, alerting, debugging
-- What: signals like logs, metrics, traces (also exception trackers, profiling)
+- What: signals like logs, metrics, traces (also exception trackers, profiling, ...)
 ---
-## Observability helps you answer questions when things go wrong, like:
+## Observability helps you answer questions when things go wrong
 - What went wrong?
 - Why did it go wrong?
 - Why is the system exhibiting this behavior?
-- Can you answer these questions without making code changes?
+- Is the service doing what users expect it to be doing?
+- **Can you answer these questions without making code changes?**
 ---
-## Observability, like DevOps, is a Way™️, not plug-n-play
-- More about culture and practices than any one tool
+## A way, not plug-n-play™️
+- More about culture and practices than any one tool, like DevOps
 - Non-functional requirement
 ---
-## What is a world class organization?
-- Can **change** quickly
+## What is a "world class" organization?
+- Can **change** quickly to meet business needs
 - End user outcomes are the focus
-- Observability enables software and organizations to move fast and break less things
+- Observability enables software and organizations to move fast and break _less_ things
 ---
 <!-- _class: lead -->
 # How is observability related to monitoring?
@@ -51,62 +58,77 @@ theme: gaia
 ## Logs (1/3)
 - The one we're all familiar with
 - Timestamp, value (text, JSON, binary)
-- + easy and familiar
-- - can lead to poor performance, especially if not async
-- - can be expensive to store if not handled properly, storage scales with usage
-- - system scoped (silod)
+- \+ easy and familiar
+- \- can lead to poor performance, especially if not async
+- \- can be expensive to store if not handled properly, storage scales with usage
+- \- system scoped (silod)
+
 ---
 ## Metrics (2/3)
 - numerical representation of data measured over intervals of time
 - Timestamp, value (numeric), name, labels
 - [Golden Signals](https://sre.google/sre-book/monitoring-distributed-systems/#xref_monitoring_golden-signals) are a good place to start: latency, traffic, errors, saturation
-- + mathematical properties allow for aggregation, prediction, summarization, etc.
-- + good for alerting
-- + storage does not scale with usage
-- - storage increases with cardinality (number of labels)
-- - system scoped (silod)
+- \+ mathematical properties allow for aggregation, prediction, summarization, etc.
+- \+ good for alerting
+- \+ storage does not scale with usage
+- \- storage increases with cardinality (number of labels)
+- \- system scoped (silo'd)
 ---
 ## Traces (3/3)
 - provides context for a request across distributed architecture (end-to-end)
 - globally unique ID that is passed through all parts of the system
 - made up of "spans" — units of work
-- + provides end-to-end observability of a request
-- - difficult to add to all aspects of the systems (1st party code, 3rd party code, frameworks, etc.)
+- \+ provides end-to-end observability of a request
+- \- difficult to add to all aspects of the systems (1st party code, 3rd party code, frameworks, etc.)
 - service meshes can provide this using proxies and sidecars
+---
+<!-- _class: lead -->
+![width:800px](https://intellitect.com/wp-content/uploads/2023/12/icicle.png)
+
 ---
 <!-- _class: lead -->
 # What is the OpenTelemetry project and why would I want to use it?
 ---
-- Open source, Cloud Native Computing Foundation project
-- Vendor-agnostic instrumentation tooling made up of
+# What is OTel
+- Open source
+- Cloud Native Computing Foundation project — incubating
+- Vendor-agnostic and tool-agnostic
+- Tooling made up of
     - Language specific APIs/SDKs
     - OTel collectors for ingesting and exporting data to backends
     - OpenTelemetry Protocol (OTLP) — protocol for sending instrumentation data
-- Types of instrumentation
-    - Automatic: captures information for you, less granular
-    - Manual: have to setup yourself, can customized as needed
 ---
 <!-- _class: lead -->
 ![width:600px](static/otel-stack.png)
 [https://failingfast.io/opentelemetry/](https://failingfast.io/opentelemetry/)
 
 ---
-## Collectors
-- receivers: receive data in a variety of formats
-- processors: aggregating, sampling, filtering, and processing
-- exporters: send data to telemetry backends
+# What is OTel — Instrumentation
+- Automatic
+    - \+ captures information for you by hooking into language and frameworks (e.g. Django, ASP.NET)
+    - \- less granular
+- Manual
+    - \+ information captured can be customized as needed
+    - \- have to setup yourself
+
 ---
-## Why
+# What is OTel — Collectors
+- What makes up a collector?
+    - Receivers: receive data in a variety of formats
+    - Processors: aggregating, sampling, filtering, and processing
+    - Exporters: send data to telemetry backends
+- Don't _have_ to use one, but it's recommended
+
+---
+## Why OTel?
 - Vendor-agnostic
 - Supported in most/all popular programming languages
 - Can get started quickly
-- Cloud platforms support it %% TODO: LINKS  %%
-- It is the future %% TODO: LINKS  %%
----
-## Cloud platforms
-- Azure: **TODO**
-- AWS: **TODO**
-- GCP: **TODO**
+- Cloud platforms support it
+- It is the future
+
+<!-- TODO: add Azure links -->
+
 ---
 ## Closing
 > Often, sheer force of effort can help a rickety system achieve high availability, but this path is usually short-lived and fraught with burnout and dependence on a small number of heroic team members. Taking a controlled, short-term decrease in availability is often a painful, but strategic trade for the long-run stability of the system.
@@ -121,3 +143,8 @@ theme: gaia
 - [Honeycomb — The Director's Guide to Observability](https://www.honeycomb.io/wp-content/uploads/2023/11/whitepaper_observability_for_TDM.pdf)
 - [The Modern Observability Problem](https://failingfast.io/opentelemetry-observability/)
 - [OpenTelemetry, The Missing Ingredient](https://failingfast.io/opentelemetry/)
+- [Observing Python: An Introduction to OpenTelemetry Metrics](https://intellitect.com/blog/opentelemetry-metrics-python/)
+
+---
+<!-- _class: lead -->
+# Questions 🎙️
